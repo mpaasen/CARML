@@ -24,8 +24,8 @@ on:
 
 env:
   location: 'NorwayEast'
-  defaultResourceGroupName: 'carmldemo-dev-validation-rg'
-  resourceGroupNameArtifacts: 'carmldemo-dev-artifacts-rg'
+  defaultResourceGroupName: 'carmld3m0-dev-validation-rg'
+  resourceGroupNameArtifacts: 'carmld3m0-dev-artifacts-rg'
   removeDeployment: 'false'
   dependencyPath: 'utilities/pipelines/dependencies'
   AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}

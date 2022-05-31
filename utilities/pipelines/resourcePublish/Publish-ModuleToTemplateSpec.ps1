@@ -16,7 +16,7 @@ Example: '1.0.0', '2.1.5-alpha.1', '0.0.5-beta.1'
 
 .PARAMETER TemplateSpecsRgName
 Mandatory. ResourceGroup of the template spec to publish to.
-Example: 'carmldemo-artifacts-rg'
+Example: 'carmld3m0-artifacts-rg'
 
 .PARAMETER TemplateSpecsRgLocation
 Mandatory. Location of the template spec resource group.
@@ -27,9 +27,9 @@ Mandatory. The description of the parent template spec.
 Example: 'iacs key vault'
 
 .EXAMPLE
-Publish-ModuleToTemplateSpec -TemplateFilePath 'C:\arm\Microsoft.KeyVault\vaults\deploy.bicep' -ModuleVersion '3.0.0-alpha' -TemplateSpecsRgName 'carmldemo-artifacts-rg' -TemplateSpecsRgLocation 'West Europe' -TemplateSpecsDescription 'iacs key vault'
+Publish-ModuleToTemplateSpec -TemplateFilePath 'C:\arm\Microsoft.KeyVault\vaults\deploy.bicep' -ModuleVersion '3.0.0-alpha' -TemplateSpecsRgName 'carmld3m0-artifacts-rg' -TemplateSpecsRgLocation 'West Europe' -TemplateSpecsDescription 'iacs key vault'
 
-Try to publish the KeyVault module with version 3.0.0-alpha to a template spec in resource group 'carmldemo-artifacts-rg'.
+Try to publish the KeyVault module with version 3.0.0-alpha to a template spec in resource group 'carmld3m0-artifacts-rg'.
 #>
 function Publish-ModuleToTemplateSpec {
 

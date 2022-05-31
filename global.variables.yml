@@ -8,14 +8,14 @@ variables:
   ######################################
 
   location: 'Norway East' # The default location to test deploy resources to
-  resourceGroupName: 'carmldemo-dev-validation-rg' # The default resource group to test deployment resources into
+  resourceGroupName: 'carmld3m0dev-validation-rg' # The default resource group to test deployment resources into
 
   ######################################
   # Publish: Template-Spec settings
   ######################################
 
   templateSpecsDoPublish: true # Set to true, if you would like to publish module templates as template specs
-  templateSpecsRGName: 'carmldemo-dev-artifacts-rg' # The name of the resource group to publish to. If the resource group does not exist, it will be created.
+  templateSpecsRGName: 'carmld3m0dev-artifacts-rg' # The name of the resource group to publish to. If the resource group does not exist, it will be created.
   templateSpecsRGLocation: 'Norway East' # The location of the resource group to publish to
   templateSpecsDescription: components # The description to add to template specs published by this platform
 
@@ -25,7 +25,7 @@ variables:
 
   bicepRegistryDoPublish: true # Set to true, if you would like to publish module templates to a bicep registry
   bicepRegistryName: carmldemobicepacr # The name of the bicep registry (ACR) to publish to. If it does not exist, it will be created.
-  bicepRegistryRGName: 'carmldemo-dev-artifacts-rg' # The resource group that hosts the private bicep registry (ACR)
+  bicepRegistryRGName: 'carmld3m0dev-artifacts-rg' # The resource group that hosts the private bicep registry (ACR)
   bicepRegistryRgLocation: 'Norway East' # The location of the resource group to publish to
 
   ###########################################################################################################################
