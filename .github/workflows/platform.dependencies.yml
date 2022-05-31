@@ -23,7 +23,7 @@ on:
   #     - 'utilities/pipelines/dependencies/**'
 
 env:
-  location: 'WestEurope'
+  location: 'NorwayEast'
   defaultResourceGroupName: 'carmldemo-validation-rg'
   resourceGroupNameArtifacts: 'carmldemo-artifacts-rg'
   removeDeployment: 'false'
