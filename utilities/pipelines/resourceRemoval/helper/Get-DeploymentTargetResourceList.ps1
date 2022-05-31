@@ -172,9 +172,9 @@ Optional. The maximum times to retry the search for resources via their removal 
 Optional. The time to wait in between the search for resources via their remove tags
 
 .EXAMPLE
-Get-DeploymentTargetResourceList -name 'KeyVault' -ResourceGroupName 'validation-rg' -scope 'resourcegroup'
+Get-DeploymentTargetResourceList -name 'KeyVault' -ResourceGroupName 'carmldemo-validation-rg' -scope 'resourcegroup'
 
-Get all deployments that match name 'KeyVault' in scope 'resourcegroup' of resource group 'validation-rg'
+Get all deployments that match name 'KeyVault' in scope 'resourcegroup' of resource group 'carmldemo-validation-rg'
 
 .EXAMPLE
 Get-ResourceIdsOfDeployment -Name 'mgmtGroup-12356' -Scope 'managementGroup' -ManagementGroupId 'af760cf5-3c9e-4804-a59a-a51741daa350'

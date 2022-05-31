@@ -17,9 +17,9 @@ Mandatory. The name of the deployment to search for (e.g. 'storageAccounts-20220
 Optional. The resource group to search the deployment in, if the scope is 'resourcegroup'
 
 .EXAMPLE
-Get-ErrorMessageForScope -DeploymentScope 'resourcegroup' -DeploymentName 'storageAccounts-20220105T0701282538Z' -ResourceGroupName 'validation-rg'
+Get-ErrorMessageForScope -DeploymentScope 'resourcegroup' -DeploymentName 'storageAccounts-20220105T0701282538Z' -ResourceGroupName 'carmldemo-validation-rg'
 
-Get the error message of any failed deployment into resource group 'validation-rg' that has the name 'storageAccounts-20220105T0701282538Z'
+Get the error message of any failed deployment into resource group 'carmldemo-validation-rg' that has the name 'storageAccounts-20220105T0701282538Z'
 
 .EXAMPLE
 Get-ErrorMessageForScope -DeploymentScope 'subscription' -DeploymentName 'resourcegroups-20220106T0401282538Z'

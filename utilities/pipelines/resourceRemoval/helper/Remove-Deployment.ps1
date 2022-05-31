@@ -31,9 +31,9 @@ Mandatory. The path to the deployment file
 Optional. The order of resource types to apply for deletion
 
 .EXAMPLE
-Remove-Deployment -DeploymentName 'KeyVault' -ResourceGroupName 'validation-rg' -TemplateFilePath 'C:/deploy.json'
+Remove-Deployment -DeploymentName 'KeyVault' -ResourceGroupName 'carmldemo-validation-rg' -TemplateFilePath 'C:/deploy.json'
 
-Remove a virtual WAN with deployment name 'keyvault-12345' from resource group 'validation-rg'
+Remove a virtual WAN with deployment name 'keyvault-12345' from resource group 'carmldemo-validation-rg'
 #>
 function Remove-Deployment {
 

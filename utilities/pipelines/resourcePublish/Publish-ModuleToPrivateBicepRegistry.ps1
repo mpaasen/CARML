@@ -15,20 +15,20 @@ Example: '1.0.0', '2.1.5-alpha.1', '0.0.5-beta.1'
 
 .PARAMETER BicepRegistryName
 Mandatory. Name of the private bicep registry to publish to.
-Example: 'adpsxxazacrx001'
+Example: 'carmldemobicepacr'
 
 .PARAMETER BicepRegistryRgName
 Mandatory. ResourceGroup of the private bicep registry to publish to.
-Example: 'artifacts-rg'
+Example: 'carmldemo-artifacts-rg'
 
 .PARAMETER BicepRegistryRgLocation
 Optional. The location of the resourceGroup the private bicep registry is deployed to. Required if the resource group is not yet existing.
 Example: 'West Europe'
 
 .EXAMPLE
-Publish-ModuleToPrivateBicepRegistry -TemplateFilePath 'C:\arm\Microsoft.KeyVault\vaults\deploy.bicep' -ModuleVersion '3.0.0-alpha' -BicepRegistryName 'adpsxxazacrx001' -BicepRegistryRgName 'artifacts-rg'
+Publish-ModuleToPrivateBicepRegistry -TemplateFilePath 'C:\arm\Microsoft.KeyVault\vaults\deploy.bicep' -ModuleVersion '3.0.0-alpha' -BicepRegistryName 'carmldemobicepacr' -BicepRegistryRgName 'carmldemo-artifacts-rg'
 
-Try to publish the KeyVault module with version 3.0.0-alpha to a private bicep registry called 'adpsxxazacrx001' in resource group 'artifacts-rg'.
+Try to publish the KeyVault module with version 3.0.0-alpha to a private bicep registry called 'carmldemobicepacr' in resource group 'carmldemo-artifacts-rg'.
 #>
 function Publish-ModuleToPrivateBicepRegistry {
 

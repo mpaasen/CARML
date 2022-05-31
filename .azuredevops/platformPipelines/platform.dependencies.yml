@@ -32,7 +32,7 @@ variables:
   - name: modulesPath
     value: 'arm'
   - name: defaultResourceGroupName
-    value: 'validation-rg'
+    value: 'carmldemo-validation-rg'
 
 stages:
   - stage: deploy_rg

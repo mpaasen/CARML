@@ -194,7 +194,7 @@ The primary pipeline variable file `global.variables.yml` hosts the fundamental 
 
 | Variable Name | Example Value | Description |
 | - | - | - |
-| `bicepRegistryName` | `"adpsxxazacrx001"` | The container registry to publish Bicep templates to. <p> **NOTE:** Must be globally unique |
+| `bicepRegistryName` | `"carmldemobicepacr"` | The container registry to publish Bicep templates to. <p> **NOTE:** Must be globally unique |
 | `bicepRegistryRGName` | `"artifacts-rg"` | The resource group of the container registry to publish Bicep templates into. It is used to create a new container registry if not yet existing |
 | `bicepRegistryRgLocation` | `'West Europe'` | The location of the resource group of the container registry to publish Bicep templates into. Is used to create a new resource group if not yet existing |
 | `bicepRegistryDoPublish` | `"true"` | A central switch to enable/disable publishing to the private Bicep registry |
@@ -279,7 +279,7 @@ The primary pipeline variable file `global.variables.yml` hosts the fundamental 
 
 | Variable Name | Example Value | Description |
 | - | - | - |
-| `templateSpecsRGName` | `'artifacts-rg'` | The resource group to host the created template-specs |
+| `templateSpecsRGName` | `'carmldemo-artifacts-rg'` | The resource group to host the created template-specs |
 | `templateSpecsRGLocation` | `'WestEurope'` | The location of the resource group to host the template-specs. Is used to create a new resource group if not yet existing |
 | `templateSpecsDescription` | `'This is a module from the [Common Azure Resource Modules Library]'` | A description to add to the published template specs |
 | `templateSpecsDoPublish` | `'true'` | A central switch to enable/disable publishing to template-specs |
@@ -291,8 +291,8 @@ The primary pipeline variable file `global.variables.yml` hosts the fundamental 
 
 | Variable Name | Example Value | Description |
 | - | - | - |
-| `bicepRegistryName` | `'adpsxxazacrx001'` | The container registry to publish Bicep templates to. <p> **NOTE:** Must be globally unique |
-| `bicepRegistryRGName` | `'artifacts-rg'` | The resource group of the container registry to publish Bicep templates to. Is used to create a new container registry if not yet existing |
+| `bicepRegistryName` | `'carmldemobicepacr'` | The container registry to publish Bicep templates to. <p> **NOTE:** Must be globally unique |
+| `bicepRegistryRGName` | `'carmldemo-artifacts-rg'` | The resource group of the container registry to publish Bicep templates to. Is used to create a new container registry if not yet existing |
 | `bicepRegistryRgLocation` | `'West Europe'` | The location of the resource group of the container registry to publish Bicep templates to. Is used to create a new resource group if not yet existing |
 | `bicepRegistryDoPublish` | `'true'` | A central switch to enable/disable publishing to the private Bicep registry |
 
