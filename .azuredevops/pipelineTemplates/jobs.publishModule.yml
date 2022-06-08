@@ -34,7 +34,7 @@
 ##   | vstsFeedName                    | '$(vstsFeedName)'                    | Required to publish to a DevOps feed. Name to the feed to publish to.                                   | 'modules'                         |
 ##   | vstsFeedProject                 | '$(vstsFeedProject)'                 | Required to publish to a DevOps feed. Name of the project hosting the artifacts feed. May be empty.     | 'iacs'                            |
 ##   | bicepRegistryName               | '$(bicepRegistryName)'               | Required to publish to the private bicep registry. Name of the hosting container registry               | 'carmldemobicepacr'               |
-##   | bicepRegistryRGName             | '$(bicepRegistryRGName)'             | Required to publish to the private bicep registry. Resource group of the hosting container registry     | 'carmld3m0-artifacts-rg'     |
+##   | bicepRegistryRGName             | '$(bicepRegistryRGName)'             | Required to publish to the private bicep registry. Resource group of the hosting container registry     | 'epocarmldemo-artifacts-rg'     |
 ##   | bicepRegistryRgLocation         | '$(bicepRegistryRgLocation)'         | Required to publish to the private bicep registry. Location of the RG of the hosting container registry | 'West Europe'                     |
 ##   | vstsOrganizationUri             | '$(vstsOrganizationUri)'             | Required to publish to a DevOps feed. Name of the organization hosting the artifacts feed.              | 'servicescode'                    |
 ##   | azurePowerShellVersion          | '$(azurePowerShellVersion)'          | Used for configuring the Azure PowerShell Version, one of the example values.                           | 'latestVersion' or 'OtherVersion' |
