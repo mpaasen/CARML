@@ -1,4 +1,4 @@
-name: Basic Web App Pipeline
+name: '.Solution - Basic Web App Pipeline'
 on:
   push:
     branches:
