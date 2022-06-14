@@ -1,5 +1,5 @@
-name: 'Validate Solution'
-description: 'Validate and preview CARML Bicep solution'
+name: 'Deploy Solution'
+description: 'Validate and Deploy CARML Bicep solution'
 
 inputs:
   subscriptionId:
