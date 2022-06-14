@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "solutionName": {
+      "value": "bicepcarml"
+    },
+    "environmentName": {
+      "value": "dev"
+    },
+    "appServicePlanSku": {
+      "value": {
+        "name": "F1",
+        "tier": "Free",
+        "capacity": 1
+      }
+    },
+    "appServicePlanOS": {
+      "value": "Windows"
+    },
+    "webAppKind": {
+      "value": "app"
+    }
+  }
+}
