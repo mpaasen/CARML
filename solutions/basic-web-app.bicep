@@ -28,12 +28,20 @@ param appServicePlanOS string
 @description('Mandatory. The type of app: Web App or Function App')
 param webAppKind string
 
+// @secure()
+// @description('Mandatory. The administrator login username for the SQL server.')
+// param sqlServerAdministratorLogin string
+
+// @secure()
+// @description('Mandatory. The administrator login password for the SQL server.')
+// param sqlServerAdministratorPassword string
+
 // ========= //
 // Variables //
 // ========= //
 
 var resourceGroupName = '${solutionName}-${environmentName}-rg'
-// var keyVaultName = '${solutionName}-${environmentName}-kv'
+var keyVaultName = '${solutionName}-${environmentName}-kv'
 var appServicePlanName = '${solutionName}-${environmentName}-asp'
 var appName = '${solutionName}-${environmentName}-webapp'
 // var sqlServerName = '${environmentName}-${solutionName}-sqlserver'
@@ -53,45 +61,19 @@ module rg '../arm/Microsoft.Resources/resourceGroups/deploy.bicep' = {
 }
 
 // Key Vault
-// module kv '../arm/Microsoft.KeyVault/vaults/deploy.bicep' = {
-//   name: keyVaultName
-//   scope: resourceGroup(resourceGroupName)
-//   params: {
-//     name: keyVaultName
-//     location: location
-//     accessPolicies
-//     secrets 
-//     keys
-//     enableVaultForDeployment
-//     enableVaultForTemplateDeployment
-//     enableVaultForDiskEncryption
-//     enableSoftDelete
-//     softDeleteRetentionInDays
-//     enableRbacAuthorization
-//     createMode
-//     enablePurgeProtection
-//     vaultSku
-//     networkAcls
-//     publicNetworkAccess
-//     diagnosticLogsRetentionInDays
-//     diagnosticStorageAccountId
-//     diagnosticWorkspaceId
-//     diagnosticEventHubAuthorizationRuleId
-//     diagnosticEventHubName
-//     lock
-//     roleAssignments
-//     privateEndpoints
-//     tags
-//     enableDefaultTelemetry
-//     baseTime
-//     diagnosticLogCategoriesToEnable
-//     diagnosticMetricsToEnable
-//     diagnosticSettingsName
-//   }
-//   dependsOn: [
-//     rg
-//   ]
-// }
+module kv '../arm/Microsoft.KeyVault/vaults/deploy.bicep' = {
+  name: keyVaultName
+  scope: resourceGroup(resourceGroupName)
+  params: {
+    name: keyVaultName
+    location: location
+    enableVaultForDeployment: true
+    enableVaultForTemplateDeployment: true
+  }
+  dependsOn: [
+    rg
+  ]
+}
 
 // App Service Plan
 module asp '../arm/Microsoft.Web/serverfarms/deploy.bicep' = {
@@ -127,14 +109,30 @@ module webapp '../arm/Microsoft.Web/sites/deploy.bicep' = {
   ]
 }
 
-// SQL Database
-// module sqldb '../arm/Microsoft.Sql/managedInstances/deploy.bicep' = {
-//   name: 'registry-nsg'
+// // SQL Server
+// module sqlserver '../arm/Microsoft.Sql/servers/deploy.bicep' = {
+//   name: sqlServerName
 //   scope: resourceGroup(resourceGroupName)
 //   params: {
-//     name: networkSecurityGroupName
+//     name: sqlServerName
+//     administratorLogin: sqlServerAdministratorLogin
+//     administratorLoginPassword: sqlServerAdministratorPassword
 //   }
 //   dependsOn: [
 //     rg
+//   ]
+// }
+
+// // SQL DB
+// module sqldb '../arm/Microsoft.Sql/servers/databases/deploy.bicep' = {
+//   name: sqlDatabaseName
+//   scope: resourceGroup(resourceGroupName)
+//   params: {
+//     name: sqlDatabaseName
+//     serverName: sqlserver.name
+//   }
+//   dependsOn: [
+//     rg
+//     sqlserver
 //   ]
 // }

@@ -5,7 +5,7 @@ on:
     branches:
     - main
     paths:
-    - '.github/actions/templates/deploySolution/action.yml'
+    - '.github/actions/templates/**'
     - 'solutions/**'
 
 env:
@@ -22,7 +22,7 @@ jobs:
 
   job_deploy_solution:
     name: 'Deploy Bicep Solution'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v2
