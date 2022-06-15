@@ -21,6 +21,68 @@
     "webAppKind": {
       "value": "app"
     },
+    "kvAccessPolicy": {
+      "value":  [
+        {
+            "tenantId": "84d4604f-367d-4745-8118-e86427386882",
+            "objectId": "5fa8090f-ffb7-4a33-b70a-fecad9066e38",
+            "permissions": {
+                "keys": [
+                    "Get",
+                    "List",
+                    "Update",
+                    "Create",
+                    "Import",
+                    "Delete",
+                    "Recover",
+                    "Backup",
+                    "Restore",
+                    "GetRotationPolicy",
+                    "SetRotationPolicy",
+                    "Rotate"
+                ],
+                "secrets": [
+                    "Get",
+                    "List",
+                    "Set",
+                    "Delete",
+                    "Recover",
+                    "Backup",
+                    "Restore"
+                ]
+            }
+        },
+        {
+            "tenantId": "84d4604f-367d-4745-8118-e86427386882",
+            "objectId": "237e0110-6e06-40ba-9d06-d38a1342e55a",
+            "permissions": {
+                "keys": [
+                    "Get",
+                    "List",
+                    "Update",
+                    "Create",
+                    "Import",
+                    "Delete",
+                    "Recover",
+                    "Backup",
+                    "Restore",
+                    "GetRotationPolicy",
+                    "SetRotationPolicy",
+                    "Rotate"
+                ],
+                "secrets": [
+                    "Get",
+                    "List",
+                    "Set",
+                    "Delete",
+                    "Recover",
+                    "Backup",
+                    "Restore"
+                ]
+            }
+        }
+    ]
+    },
     "sqlServerAdministratorLogin": {
       "reference": {
         "keyVault": {

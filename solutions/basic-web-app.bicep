@@ -28,6 +28,9 @@ param appServicePlanOS string
 @description('Mandatory. The type of app: Web App or Function App')
 param webAppKind string
 
+@description('Optional. An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault\'s tenant ID.')
+param kvAccessPolicy array = []
+
 @secure()
 @description('Mandatory. The administrator login username for the SQL server.')
 param sqlServerAdministratorLogin string
@@ -42,6 +45,7 @@ param sqlServerAdministratorPassword string
 
 var resourceGroupName = '${solutionName}-${environmentName}-rg'
 var keyVaultName = '${solutionName}-${environmentName}-kv'
+var kvaccesspolicy = '${solutionName}-${environmentName}-kvaccess'
 var appServicePlanName = '${solutionName}-${environmentName}-asp'
 var appName = '${solutionName}-${environmentName}-webapp'
 var sqlServerName = '${environmentName}-${solutionName}-sqlserver'
@@ -66,12 +70,25 @@ module kv '../arm/Microsoft.KeyVault/vaults/deploy.bicep' = {
   scope: resourceGroup(resourceGroupName)
   params: {
     name: keyVaultName
-    location: location
     enableVaultForDeployment: true
     enableVaultForTemplateDeployment: true
   }
   dependsOn: [
     rg
+  ]
+}
+
+// Key Vault Access Policy
+module kvaccess '../arm/Microsoft.KeyVault/vaults/accessPolicies/deploy.bicep' = {
+  name: kvaccesspolicy
+  scope: resourceGroup(resourceGroupName)
+  params: {
+    keyVaultName: keyVaultName
+    accessPolicies: kvAccessPolicy
+  }
+  dependsOn: [
+    rg
+    kv
   ]
 }
 
