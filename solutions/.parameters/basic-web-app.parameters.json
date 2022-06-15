@@ -20,6 +20,22 @@
     },
     "webAppKind": {
       "value": "app"
+    },
+    "sqlServerAdministratorLogin": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/a8203460-7902-4329-8171-c459c80371d1/resourceGroups/bicepcarml-dev-rg/providers/Microsoft.KeyVault/vaults/bicepcarml-dev-kv"
+        },
+        "secretName": "sqlServerAdministratorLogin"
+      }
+    },
+    "sqlServerAdministratorPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/a8203460-7902-4329-8171-c459c80371d1/resourceGroups/bicepcarml-dev-rg/providers/Microsoft.KeyVault/vaults/bicepcarml-dev-kv"
+        },
+        "secretName": "sqlServerAdministratorPassword"
+      }
     }
   }
 }

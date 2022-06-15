@@ -28,13 +28,13 @@ param appServicePlanOS string
 @description('Mandatory. The type of app: Web App or Function App')
 param webAppKind string
 
-// @secure()
-// @description('Mandatory. The administrator login username for the SQL server.')
-// param sqlServerAdministratorLogin string
+@secure()
+@description('Mandatory. The administrator login username for the SQL server.')
+param sqlServerAdministratorLogin string
 
-// @secure()
-// @description('Mandatory. The administrator login password for the SQL server.')
-// param sqlServerAdministratorPassword string
+@secure()
+@description('Mandatory. The administrator login password for the SQL server.')
+param sqlServerAdministratorPassword string
 
 // ========= //
 // Variables //
@@ -44,8 +44,8 @@ var resourceGroupName = '${solutionName}-${environmentName}-rg'
 var keyVaultName = '${solutionName}-${environmentName}-kv'
 var appServicePlanName = '${solutionName}-${environmentName}-asp'
 var appName = '${solutionName}-${environmentName}-webapp'
-// var sqlServerName = '${environmentName}-${solutionName}-sqlserver'
-// var sqlDatabaseName = '${solutionName}-db'
+var sqlServerName = '${environmentName}-${solutionName}-sqlserver'
+var sqlDatabaseName = '${solutionName}-db'
 
 // =========== //
 // Deployments //
@@ -109,30 +109,30 @@ module webapp '../arm/Microsoft.Web/sites/deploy.bicep' = {
   ]
 }
 
-// // SQL Server
-// module sqlserver '../arm/Microsoft.Sql/servers/deploy.bicep' = {
-//   name: sqlServerName
-//   scope: resourceGroup(resourceGroupName)
-//   params: {
-//     name: sqlServerName
-//     administratorLogin: sqlServerAdministratorLogin
-//     administratorLoginPassword: sqlServerAdministratorPassword
-//   }
-//   dependsOn: [
-//     rg
-//   ]
-// }
+// SQL Server
+module sqlserver '../arm/Microsoft.Sql/servers/deploy.bicep' = {
+  name: sqlServerName
+  scope: resourceGroup(resourceGroupName)
+  params: {
+    name: sqlServerName
+    administratorLogin: sqlServerAdministratorLogin
+    administratorLoginPassword: sqlServerAdministratorPassword
+  }
+  dependsOn: [
+    rg
+  ]
+}
 
-// // SQL DB
-// module sqldb '../arm/Microsoft.Sql/servers/databases/deploy.bicep' = {
-//   name: sqlDatabaseName
-//   scope: resourceGroup(resourceGroupName)
-//   params: {
-//     name: sqlDatabaseName
-//     serverName: sqlserver.name
-//   }
-//   dependsOn: [
-//     rg
-//     sqlserver
-//   ]
-// }
+// SQL DB
+module sqldb '../arm/Microsoft.Sql/servers/databases/deploy.bicep' = {
+  name: sqlDatabaseName
+  scope: resourceGroup(resourceGroupName)
+  params: {
+    name: sqlDatabaseName
+    serverName: sqlserver.name
+  }
+  dependsOn: [
+    rg
+    sqlserver
+  ]
+}
