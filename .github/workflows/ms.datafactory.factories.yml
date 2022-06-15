@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.datafactory.factories.yml'
       - 'arm/Microsoft.DataFactory/factories/**'
       - 'arm/.global/global.module.tests.ps1'

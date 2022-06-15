@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.synapse.privatelinkhubs.yml'
       - 'arm/Microsoft.Synapse/privateLinkHubs/**'
       - 'arm/.global/global.module.tests.ps1'

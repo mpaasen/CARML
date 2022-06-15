@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.compute.virtualmachinescalesets.yml'
       - 'arm/Microsoft.Compute/virtualMachineScaleSets/**'
       - 'arm/.global/global.module.tests.ps1'

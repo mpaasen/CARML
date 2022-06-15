@@ -18,7 +18,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.automation.automationaccounts.yml'
       - 'arm/Microsoft.Automation/automationAccounts/**'
       - 'arm/.global/global.module.tests.ps1'

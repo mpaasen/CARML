@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.recoveryservices.vaults.yml'
       - 'arm/Microsoft.RecoveryServices/vaults/**'
       - 'arm/.global/global.module.tests.ps1'

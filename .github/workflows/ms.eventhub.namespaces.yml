@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.eventhub.namespaces.yml'
       - 'arm/Microsoft.EventHub/namespaces/**'
       - 'arm/.global/global.module.tests.ps1'

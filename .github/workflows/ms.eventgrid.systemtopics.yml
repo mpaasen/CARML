@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.eventgrid.systemtopics.yml'
       - 'arm/Microsoft.EventGrid/systemTopics/**'
       - 'arm/.global/global.module.tests.ps1'

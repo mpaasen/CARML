@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.authorization.policyassignments.yml'
       - 'arm/Microsoft.Authorization/policyAssignments/**'
       - 'arm/.global/global.module.tests.ps1'

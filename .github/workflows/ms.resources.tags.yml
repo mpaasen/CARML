@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.resources.tags.yml'
       - 'arm/Microsoft.Resources/tags/**'
       - 'arm/.global/global.module.tests.ps1'

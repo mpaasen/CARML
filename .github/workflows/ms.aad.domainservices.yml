@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.aad.domainservices.yml'
       - 'arm/Microsoft.AAD/DomainServices/**'
       - 'arm/.global/global.module.tests.ps1'

@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.logic.workflows.yml'
       - 'arm/Microsoft.Logic/workflows/**'
       - 'arm/.global/global.module.tests.ps1'

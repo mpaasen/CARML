@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.machinelearningservices.workspaces.yml'
       - 'arm/Microsoft.MachineLearningServices/workspaces/**'
       - 'arm/.global/global.module.tests.ps1'

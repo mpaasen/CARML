@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.authorization.roledefinitions.yml'
       - 'arm/Microsoft.Authorization/roleDefinitions/**'
       - 'arm/.global/global.module.tests.ps1'

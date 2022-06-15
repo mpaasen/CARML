@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.appconfiguration.configurationstores.yml'
       - 'arm/Microsoft.AppConfiguration/configurationStores/**'
       - 'arm/.global/global.module.tests.ps1'

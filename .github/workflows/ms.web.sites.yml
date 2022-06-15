@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.web.sites.yml'
       - 'arm/Microsoft.Web/sites/**'
       - 'arm/.global/global.module.tests.ps1'

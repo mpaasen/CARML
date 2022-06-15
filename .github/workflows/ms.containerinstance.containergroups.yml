@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.containerinstance.containergroups.yml'
       - 'arm/Microsoft.ContainerInstance/containerGroups/**'
       - 'arm/.global/global.module.tests.ps1'

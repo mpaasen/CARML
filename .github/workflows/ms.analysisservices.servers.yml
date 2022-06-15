@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.analysisservices.servers.yml'
       - 'arm/Microsoft.AnalysisServices/servers/**'
       - 'arm/.global/global.module.tests.ps1'

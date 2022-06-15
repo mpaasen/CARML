@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.network.firewallpolicies.yml'
       - 'arm/Microsoft.Network/firewallPolicies/**'
       - 'arm/.global/global.module.tests.ps1'

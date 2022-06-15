@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.compute.images.yml'
       - 'arm/Microsoft.Compute/images/**'
       - 'arm/.global/global.module.tests.ps1'

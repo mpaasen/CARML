@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.kubernetesconfiguration.extensions.yml'
       - 'arm/Microsoft.KubernetesConfiguration/extensions/**'
       - 'arm/.global/global.module.tests.ps1'

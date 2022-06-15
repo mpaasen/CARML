@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.databricks.workspaces.yml'
       - 'arm/Microsoft.Databricks/workspaces/**'
       - 'arm/.global/global.module.tests.ps1'

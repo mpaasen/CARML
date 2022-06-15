@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.keyvault.vaults.yml'
       - 'arm/Microsoft.KeyVault/vaults/**'
       - 'arm/.global/global.module.tests.ps1'

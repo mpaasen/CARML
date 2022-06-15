@@ -17,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/actions/templates/**'
+      #- '.github/actions/templates/**'
       - '.github/workflows/ms.desktopvirtualization.applicationgroups.yml'
       - 'arm/Microsoft.DesktopVirtualization/applicationgroups/**'
       - 'arm/.global/global.module.tests.ps1'
