@@ -20,9 +20,18 @@ runs:
   using: 'composite'
   steps:
 
-    # --------------------------------------#
+    # --------------- #
+    #  Login to Azure #
+    # --------------- #
+    - name: Azure Login
+      uses: Azure/login@v1
+      with:
+        creds: ${{ env.AZURE_CREDENTIALS }}
+        enable-AzPSSession: true
+
+    # ------------------------------------- #
     #  Validate the Subscription Deployment #
-    # --------------------------------------#
+    # ------------------------------------- #
     - name: 'Validate [${{ inputs.subscriptionId }}] Azure subscription deployment'
       shell: pwsh
       run: |
@@ -37,9 +46,9 @@ runs:
           -TemplateParameterFile ${{ inputs.parameterFilePath }} `
           -Verbose
 
-    # -------------------------#
+    # ------------------------ #
     #  Subscription Deployment #
-    # -------------------------#
+    # ------------------------ #
     - name: 'Validate [${{ inputs.subscriptionId }}] Azure subscription deployment'
       shell: pwsh
       run: |

@@ -10,10 +10,11 @@ on:
 
 env:
   #solutionVariables: 'global.variables.yml'
-  subscriptionId: 'a8203460-7902-4329-8171-c459c80371d1'
+  subscriptionId: '${{ secrets.ARM_SUBSCRIPTION_ID }}'
   location: 'norwayeast'
   templateFilePath: './solutions/basic-web-app.bicep'
   parameterFilePath: './solutions/.parameters/basic-web-app.parameters.json'
+  AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
 
 jobs:
   ###################################
