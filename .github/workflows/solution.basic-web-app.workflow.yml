@@ -5,7 +5,9 @@ on:
     branches:
     - main
     paths:
+    - '.github/actions/templates/deploySolution/action.yml'
     - 'solutions/**'
+
 env:
   #solutionVariables: 'global.variables.yml'
   subscriptionId: 'a8203460-7902-4329-8171-c459c80371d1'

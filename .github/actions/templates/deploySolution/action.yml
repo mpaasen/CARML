@@ -26,9 +26,6 @@ runs:
     - name: 'Validate [${{ inputs.subscriptionId }}] Azure subscription deployment'
       shell: pwsh
       run: |
-        Install-module Az -AllowClobber -Force
-        Import-module Az
-        
         Select-AzSubscription ${{ inputs.subscriptionId }}
 
         Test-AzDeployment `
